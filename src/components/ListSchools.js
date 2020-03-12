@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 class ListSchools extends Component {
   render () {
@@ -16,7 +17,7 @@ class ListSchools extends Component {
                   <p>{school.schoolBoard}<br/>
                     {school.address}
                   </p>
-                  <a href={school.id} class="waves-effect waves-light btn-small secondary-content">More Info</a>
+                  <Link to={'/school-list/' + school.id} class="waves-effect waves-light btn-small secondary-content">More Info</Link>
                 </li>
               )
           })}
